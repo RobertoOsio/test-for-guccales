@@ -7,7 +7,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 
 
-app.config['SQLALCHEMY_DATABASE_URI'] = f'https://dashboard.render.com/email-confirm/?token=Z6TbEHVzci1jdWhvajQzdHEyMWM3M2JkY2R0MIkXet8wHFCRHgnxgLKL2sMmkNqsRHgjD1S2ngcOEnz5'
+app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://gubase_user:wcddvcGfTyb7h1T65DwIWkx0SJZe8Kri@dpg-cuhokjl6l47c73duj8cg-a/gubase'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 app.secret_key = 'guccalestestkey'
