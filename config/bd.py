@@ -7,7 +7,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 
 
-app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://root@localhost/redentor'
+app.config['SQLALCHEMY_DATABASE_URI'] = f'https://dashboard.render.com/email-confirm/?token=Z6TbEHVzci1jdWhvajQzdHEyMWM3M2JkY2R0MIkXet8wHFCRHgnxgLKL2sMmkNqsRHgjD1S2ngcOEnz5'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 app.secret_key = 'guccalestestkey'
