@@ -1,5 +1,5 @@
 //TODO CAMBIAR EL URL DEL SOCKET IO POR EL LINK DEL PANEL DE ADMINISTRACIÓN
-let socket = io.connect("http://localhost:5000/");
+let socket = io.connect("https://test-for-guccales.onrender.com/");
 
 function generateTableRow(data) {
   return `
