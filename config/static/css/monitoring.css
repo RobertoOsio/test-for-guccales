@@ -1,0 +1,73 @@
+/* Estilos de la barra lateral */
+.bg-gradient {
+  /* Un degradado vertical */
+  background: linear-gradient(180deg, #1e3c72, #2a5298);
+}
+
+.sidebar {
+  min-height: 100vh;
+  padding-top: 1rem;
+}
+
+.sidebar .nav-link {
+  font-size: 1rem;
+  padding: 0.8rem 1.5rem;
+  transition: background 0.3s ease-in-out;
+}
+
+.sidebar .nav-link.active,
+.sidebar .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-left: 3px solid #fff;
+}
+
+/* Cartas con hover */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Offcanvas (menú móvil) estilizado */
+.offcanvas.bg-gradient {
+  background: linear-gradient(180deg, #1e3c72, #2a5298);
+}
+
+.offcanvas .nav-link {
+  padding: 0.75rem 1rem;
+}
+
+.offcanvas .nav-link.active,
+.offcanvas .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-left: 3px solid #fff;
+}
+
+@media (max-width: 576px) {
+  .table th,
+  .table td {
+    font-size: 0.85rem; /* reduce tamaño de fuente */
+    padding: 0.3rem;   /* reduce el padding */
+  }
+}
+
+.active{
+  padding: 5px;
+            box-shadow: 0 0 7.5px rgba(255, 0, 124, 0.8), 
+                        0 0 15px rgba(0, 212, 255, 0.8);
+            position: relative;
+}
+
+.active::before{
+  content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -2.5px;
+            filter: blur(10px);
+            z-index: -1;
+}
