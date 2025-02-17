@@ -15,7 +15,7 @@ app.register_blueprint(logs_routes, url_prefix='/logs')
 app.register_blueprint(buttons_routes, url_prefix='/buttons')
 
 #TODO ZONA DE PERSONALIZACION
-TK = 'gusales'
+TK = 'guccales'
 LINK_TITLE = "Gucci"
 #TODO ZONA DE PERSONALIZACION
 
