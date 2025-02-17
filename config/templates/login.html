@@ -1,5 +1,4 @@
-<!-- TODO cambiar title tambien (linea 2) -->
-{% extends "layout.html" %} {% block title %} G U C C I {% endblock %} {% block content %}
+{% extends "layout.html" %} {% block title %} {{ title }} | L O G I N {% endblock %} {% block content %}
 
 <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
     <form class="form" action="/users/login" method="POST">

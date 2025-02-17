@@ -14,28 +14,32 @@ app.register_blueprint(info_routes, url_prefix='/info')
 app.register_blueprint(logs_routes, url_prefix='/logs')
 app.register_blueprint(buttons_routes, url_prefix='/buttons')
 
+#TODO ZONA DE PERSONALIZACION
+TK = 'gusales'
+LINK_TITLE = "Gucci"
+#TODO ZONA DE PERSONALIZACION
 
-TK = 'guccales'
+LINK_TITLE = " ".join(LINK_TITLE.upper())
 
 def token_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
         token = request.args.get('token')
         if not token or token != TK:
-            return redirect("https://www.faithward.org/es/que-es-la-iglesia/")
+            return redirect("https://www.youtube.com/watch?v=E4WlUXrJgy4")
         return f(*args, **kwargs)
     return decorated_function
 
 @app.route('/')
 @token_required
 def index():
-    return render_template('login.html')
+    return render_template('login.html', title=LINK_TITLE)
 
 @app.route('/monitoring')
 def monitoring():
     if 'username' not in session:
         return redirect('/')
-    return render_template('monitoring.html')
+    return render_template('monitoring.html', title=LINK_TITLE)
 
 if __name__ == '__main__':
     import os

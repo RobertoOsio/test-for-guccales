@@ -1,6 +1,5 @@
-<!-- TODO Cambiar block title también en mayuscula y espaciado para estilo jejeje (Linea 3) -->
 {% extends "layout.html" %}
-{% block title %}G U C C I{% endblock %}
+{% block title %}{{ title }}{% endblock %}
 {% block content %}
 
 <!-- Contenedor principal -->
@@ -10,7 +9,7 @@
         <!-- SIDEBAR PARA ESCRITORIO (se oculta en móvil) -->
         <div class="d-none d-md-block col-md-3 col-lg-2 bg-gradient sidebar text-white">
             <div class="p-3">
-                <h3 class="text-center py-3">R E D E N T O R</h3>
+                <h3 class="text-center py-3">{{ title }}</h3>
                 <ul class="nav flex-column">
                     <li class="nav-item">
                         <a class="nav-link text-white align-items-center" id="trico-button">
